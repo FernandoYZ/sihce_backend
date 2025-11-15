@@ -42,3 +42,6 @@ Thumbs.db      # Windows
 .env.local
 .env.development.local
 .env.test.local
+
+# Archivos para desarrollo
+env.bat

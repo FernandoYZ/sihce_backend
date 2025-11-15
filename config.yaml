@@ -1,0 +1,21 @@
+jwt:
+  access_secret: "${JWT_ACCESS_SECRET}"
+  refresh_secret: "${JWT_REFRESH_SECRET}"
+  access_token_expiration_seconds: 21600  # 6 horas
+  refresh_token_expiration_seconds: 86403  # 3 días
+
+security:
+  session_secret: "${SESSION_SECRET}"
+  hash_salt_rounds: 10
+
+app:
+  port: 3054
+  cors_origins:
+    - "http://localhost:3055"
+    - "http://localhost:3056"
+    - "http://localhost:3206"
+    - "http://localhost:3000"
+    - "http://192.168.80.15:3206"
+    - "http://192.168.80.14:3055"
+  log_level: debug
+  app_env: dev
