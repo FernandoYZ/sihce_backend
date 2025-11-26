@@ -1,0 +1,28 @@
+database:
+  principal:
+    host: "${DB_SERVER}"
+    port: 1433
+    name: "${DB_DATABASE_PRINCIPAL}"
+    user: "${DB_USER}"
+    password: "${DB_PASSWORD}"
+    encrypt: false
+    trust_server_certificate: false
+    pool:
+      min: 0
+      max: 100
+      idle_timeout_ms: 10000
+      connection_timeout_ms: 5000
+
+  secundaria:
+    host: "${DB_SERVER}"
+    port: 1433
+    name: "${DB_DATABASE_SECUNDARIA}"
+    user: "${DB_USER}"
+    password: "${DB_PASSWORD}"
+    encrypt: false
+    trust_server_certificate: false
+    pool:
+      min: 0
+      max: 5
+      idle_timeout_ms: 10000
+      connection_timeout_ms: 5000
