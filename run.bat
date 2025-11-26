@@ -3,6 +3,6 @@ REM --- Cargar secretos ---
 call env.bat
 
 REM --- Ejecutar la aplicación Go ---
-go run .
+go run cmd\api\main.go
 
 pause
