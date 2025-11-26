@@ -9,7 +9,7 @@ import (
 
 func ConfigurarRutas(router *fiber.App, db *database.GestorDB) {
 	api := router.Group("/api")
-	api.Get("/", VerificarApi)
+	api.Get("/", VerificarApi(db))
 
 	// Registro de módulos de la API
 	triaje.NuevoModulo(db).RegistrarRutas(api)
